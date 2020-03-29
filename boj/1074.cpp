@@ -10,6 +10,7 @@ long long get_order(long long r, long long c, long long n) {
 	rr = r / nn;
 	cc = c / nn;
 
+    // This is number of steps required to get to the current quadrant
 	long long order = (rr * 2 + cc) * nn * nn;
 	return order + get_order(r % nn, c % nn, n - 1);
 }
